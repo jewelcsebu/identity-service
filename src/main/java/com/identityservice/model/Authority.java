@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 
-import javax.management.relation.Role;
 import javax.persistence.*;
 
 @Data
@@ -23,7 +22,6 @@ public class Authority implements GrantedAuthority {
     @Enumerated(EnumType.STRING)
     @Column(name = "authority_name")
     private RoleName authorityName;
-
 
     @Override
     public String getAuthority() {
